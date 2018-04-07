@@ -19,6 +19,12 @@ COPY ./secrets/*.key $SSL_KEY
 COPY ./logo.png /srv/jupyterhub/
 RUN chmod 700 /srv/jupyterhub/secrets && \
     chmod 600 /srv/jupyterhub/secrets/*
+   
 
 COPY ./userlist /srv/jupyterhub/userlist
 COPY ./cull_idle_servers.py /srv/jupyterhub/cull_idle_servers.py
+
+# Copy customized templates
+COPY templates/home.html /opt/conda/share/jupyter/hub/templates/home.html
+COPY templates/login.html /opt/conda/share/jupyter/hub/templates/login.html
+COPY static/images/OAuth.png /opt/conda/share/jupyter/hub/static/images/OAuth.png
