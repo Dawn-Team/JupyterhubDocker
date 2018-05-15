@@ -27,4 +27,5 @@ COPY ./cull_idle_servers.py /srv/jupyterhub/cull_idle_servers.py
 # Copy customized templates
 COPY templates/home.html /opt/conda/share/jupyter/hub/templates/home.html
 COPY templates/login.html /opt/conda/share/jupyter/hub/templates/login.html
+COPY static/favicon.ico /opt/conda/share/jupyter/hub/static/favicon.ico
 COPY static/images/OAuth.png /opt/conda/share/jupyter/hub/static/images/OAuth.png
