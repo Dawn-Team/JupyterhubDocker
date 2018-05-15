@@ -12,6 +12,9 @@
         <div class="text-center">
             {% if user.running %}
             <a id="stop" role="button" class="btn btn-lg  btn-danger" >Stop My Server</a>
+            <a id="start"role="button" class="btn btn-lg btn-success" href="{{ url }}/lab">
+                Try Lab UI
+            </a>
             {% endif %}
             <a id="start"role="button" class="btn btn-lg btn-success" href="{{ url }}">
                 {% if not user.running %}
